@@ -100,3 +100,10 @@ sun				|Sunday
 ## app_role ##
 * On Macro level AWS services are classified as Computing, Networking,Storage, RDS etc
 * addition of this tag will help us to classify component mainly from cost perspective.
+
+## Version History of this module ##
+
+Version  |Notes
+----------------|---------------------------------------------------------------
+0.1    |  AWS VPC
+
