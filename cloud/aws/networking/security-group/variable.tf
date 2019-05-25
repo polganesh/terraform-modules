@@ -1,25 +1,6 @@
-variable "environment"{
-	description="indicates name of our environment. possible values dev,cit,sit,uat,pprod,prod,n"
-	default="dev"
-}
-
-variable "cost_centre"{
-	description="A part of an organization to which costs may be charged.e.g. finance/it/hr/wholesale/retail/investment etc..."
-	default=""
-}
-variable "vpc_cidr_block"{}
-
-variable "vpc_instance_tenancy" {
-	default="default" 
-	description="possible values default or dedicated"
-}
-
-variable "assign_ipv6_cidr_block"{
-	default="false" 
-}
-
-variable "region_id"{
-	default="euw1"
+variable "region_id" {
+  description = "Defines the ID of the region for the Security Group. e.g euw1"
+  default = "euw1"
 }
 
 variable "region"{
@@ -27,40 +8,91 @@ variable "region"{
 	default="eu-west-1"
 }
 
-variable "version_id"{
-	description="version of this component.everytime when we are updating this component we need to increment it."
-	default=""
+variable "cost_centre" {}
+
+variable "environment" {
+  description = "The name of your environment, e.g. p for production n for non-production, or dev/sit/uat etc"
+  default = ""
 }
 
-variable "build_date"{
-	description="date on which this component built/modified. format ddmmyyyy e.g. 27122017"
-	default=""
+variable "vpc_seq_id" {
+  description = "Defines the VPC Sequence ID that the Security Group will be associated with. e.g 001"
+  default = ""
 }
 
-variable "vpc_seq_id"{
+variable "app_service" {
+  description = ""
+  default = ""
 }
 
-variable "public_subnet_cidr_list"{
-	description="all public facing resources e.g. ALB will reside in this subnet"
-	type="list"
+variable "sg_for" {
+  description = "indicates it is for ECS, EKS or any other cluster"
+  default = ""
 }
 
-variable "private_app_subnet_list"{
-	description="all backend micro services ECS/K8s etc will receive request from this."
-	type="list"
+variable "seq_id" {
+  description = "Defines the unique sequence ID for the Security Group. e.g 001"
+  default = ""
 }
 
-variable "private_db_subnet_list"{
-	description="all noSQL, RDS etc will reside here"
-	type="list"
+variable "sg_description" {
+  description = "Defines the description for the security group. Should contain the name of the associated resource."
+  default = "Security Group managed by Terraform"
 }
 
-variable "az_list"{
-	type="list"
-	default=["eu-west-1a","eu-west-1b","eu-west-1c"]
+variable "version_id" {
+  description = "Defines the description for the security group. Should contain the name of the associated resource."
+  default = "Security Group managed by Terraform"
 }
 
-variable "seq_id"{}
-variable "app_role"{}
+variable "build_date" {
+  description = "The date of build (yyyymmdd), e.g. 20170701"
+  default = ""
+}
+
+variable "app_role" {
+  description = "The name of the application role, e.g. app_server"
+  default = ""
+}
+
+variable "aws_resource_assoc" {
+  description = "Defines the type of AWS resource that the Security Group is associated with. e.g ec2/rds/elb"
+  default = ""
+}
+
+variable "auto_update" {
+  description = "Defines whether the Security Group should be auto-updated, by lambda, with any new source addresses."
+  default = "true"
+}
+
+variable "part_of_cluster" {
+  description = "Defines whether the Security Group is part of a cluster resource ECS,EKS etc"
+  default = "n"
+}
+
+variable "maintenance_day" {
+  description = "Defines the day of the week that maintenance activities are permitted. mon/tue/wed etc or none"
+  default = ""
+}
+
+variable "maintenance_time" {
+  description = "Defines the time on maintenance_time that maintenance activities are permitted. 24h format, no colon i.e 0400"
+  default = ""
+}
+
+variable "confidentiality" {
+  description = "An identifier for the specific data-confidentiality level a resource supports. public/internal/confidential/highly confidential"
+  default = ""
+}
+
+variable "compliance" {
+  description = "An identifier for workloads designed to adhere to specific compliance requirements. none/pci"
+  default = ""
+}
+
+variable "aws_resource_assoc" {
+  description = "Defines the type of AWS resource that the Security Group is associated with. e.g ec2/rds/elb"
+  default = ""
+}
 
 
