@@ -1,6 +1,5 @@
-
 resource "aws_eks_cluster" "main" {
-  name     = eks-${var.region_id}-${var.environment}-${var.cost_centre}-vpc${var.vpc_seq_id}-${var.app_service}-${var.seq_id}"
+  name     = "eks-${var.region_id}-${var.environment}-${var.cost_centre}-vpc${var.vpc_seq_id}-${var.app_service}-${var.seq_id}"
   role_arn = "${aws_iam_role.main.arn}"
 
   vpc_config {
