@@ -55,10 +55,6 @@ variable "app_role" {
   default = ""
 }
 
-variable "aws_resource_assoc" {
-  description = "Defines the type of AWS resource that the Security Group is associated with. e.g ec2/rds/elb"
-  default = ""
-}
 
 variable "auto_update" {
   description = "Defines whether the Security Group should be auto-updated, by lambda, with any new source addresses."
