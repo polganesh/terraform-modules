@@ -74,7 +74,6 @@ resource "aws_iam_role_policy_attachment" "tf-eks-node-AmazonEC2ContainerRegistr
 }
 
 resource "aws_iam_instance_profile" "node" {
-  "iamprof-glob-${var.environment}-${var.cost_centre}-${var.app_service}Wnd-${var.seq_id}"
   name = "iamprof-glob-${var.environment}-${var.cost_centre}-${var.app_service}Wnd-${var.seq_id}"
   role = "${aws_iam_role.wnode.name}"
 }
