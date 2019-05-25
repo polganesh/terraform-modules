@@ -22,4 +22,8 @@ variable "region"{
 	default="eu-west-1"
 }
 
+variable "eks_version"{
+ default="1.12"
+ description="define k8s version"
+}
 variable "vpc_seq_id"{}
