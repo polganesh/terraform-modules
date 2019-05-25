@@ -91,4 +91,17 @@ variable "aws_resource_assoc" {
   default = ""
 }
 
+variable "inbound_cidr_rules" {
+  default = {}
+}
+variable "inbound_id_rules" {
+  default = {}
+}
+variable "outbound_cidr_rules" {
+  default = {}
+}
+variable "outbound_id_rules" {
+  default = {}
+}
+
 
