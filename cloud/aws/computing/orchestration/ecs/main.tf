@@ -8,9 +8,10 @@
 data "aws_vpc" "vpc" {
    filter {
     name   = "tag:Name"
-    values = ["*-${var.cost_centre}-${var.vpc_seq_id}"]
+    values = ["vpc-${var.region_id}*-${var.cost_centre}-${var.vpc_seq_id}"]
   }
 }
+
 
 # get reference of aws availability zones
 data "aws_availability_zones" "main" {}
