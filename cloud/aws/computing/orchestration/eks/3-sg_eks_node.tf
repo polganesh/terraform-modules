@@ -1,7 +1,7 @@
     resource "aws_security_group" "tf-eks-node" {
         name        = "terraform-eks-node"
         description = "Security group for all nodes in the cluster"
-        vpc_id      = "${var.vpc_id}"
+        vpc_id      = "${data.aws_vpc.vpc.id}"
 
         egress {
             from_port   = 0
