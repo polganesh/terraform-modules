@@ -27,3 +27,22 @@ variable "eks_version"{
  description="define k8s version"
 }
 variable "vpc_seq_id"{}
+variable "image_id"{}
+variable "instance_type" {
+  default     = "t2.micro"
+  description = "AWS Instance type, if you change, make sure it is compatible with AMI, not all AMIs allow all instance types "
+}
+
+variable "instance_ebs_optimized"{}
+variable "key_name"{}
+
+variable "key_name"{}
+variable "launch_config_sec_group_id"{}
+variable "root_volume_size"{}
+# we want ec2 instance must be created in private subnet
+variable "associate_public_ip_address"{default="false"}
+variable "desired_capacity" {}
+variable "min_size" {}
+variable "max_size" {}
+
+
