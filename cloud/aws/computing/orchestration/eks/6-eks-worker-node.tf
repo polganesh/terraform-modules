@@ -59,7 +59,7 @@ resource "aws_launch_configuration" "eks" {
 
 resource "aws_autoscaling_group" "main" {
   name = "asg-${var.region_id}-${var.environment}-${var.cost_centre}-vpc${var.vpc_seq_id}-${var.app_service}Eks-${var.seq_id}"
-  desired_capacity     = ${var.desired_capacity}"
+  desired_capacity     = "${var.desired_capacity}"
   
   launch_configuration = "${aws_launch_configuration.eks.id}"
   min_size             = "${var.min_size}"
