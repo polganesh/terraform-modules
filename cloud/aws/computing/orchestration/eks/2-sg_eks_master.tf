@@ -2,7 +2,7 @@
 resource "aws_security_group" "tf-eks-master" {
     name        = "terraform-eks-cluster"
     description = "Cluster communication with worker nodes"
-    vpc_id      = "${var.vpc_id}"
+    vpc_id      = "${data.aws_vpc.vpc.id}"
 
     egress {
         from_port   = 0

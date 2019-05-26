@@ -36,7 +36,6 @@ variable "instance_type" {
 variable "instance_ebs_optimized"{}
 variable "key_name"{}
 
-variable "key_name"{}
 variable "launch_config_sec_group_id"{}
 variable "root_volume_size"{}
 # we want ec2 instance must be created in private subnet
