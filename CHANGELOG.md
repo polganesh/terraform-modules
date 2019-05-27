@@ -1,6 +1,7 @@
 # Change Log
 
-## [0.3.1]
+## [[0.3.1](https://github.com/polganesh/terraform-modules/compare/0.3...0.3.1)] - 2019-05-27]
+
 ### Added
 NA
 ### Updated 
@@ -9,7 +10,8 @@ NA
   - private app subnets
  for EKS 
     
-## [0.3]
+## [[0.3](https://github.com/polganesh/terraform-modules/compare/0.2...0.3)] - 2019-05-27]
+
 ### Added
 - AWS 
   - Computing 
