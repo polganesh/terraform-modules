@@ -29,3 +29,35 @@ To Create EKS cluster with this module
    - public subnet as
      - kubernetes.io/cluster/_cluster-name_ with value shared
      - kubernetes.io/role/elb with value 1
+     
+## Example
+```
+module "ekscluster"{
+   	source="git::https://github.com/polganesh/terraform-modules.git//cloud/aws/computing/orchestration/eks"
+	region="eu-central-1"
+	region_id="euc1"
+	cost_centre="infra"
+	vpc_seq_id="001"
+	seq_id="001"
+	environment="dev"
+	app_service="poc"
+	image_id="ami-0c348c78b4a0db989"
+	instance_type="m4.large"
+	key_name="nonprod"
+	desired_capacity="2"
+	min_size="2"
+	max_size="4"
+}
+```
+## Configure - Post EKS cluster creation
+following are one times activities
+
+### Configure kubectl
+following example assume we are using windows machine,but similar steps can be followed for other OS.
+it will copy config available from terraform output for module ekscluster in <user-home
+
+![alt text](https://github.com/polganesh/wiki-images/blob/master/terraform-examples/k8s-aws-kubectl-config.JPG)
+
+
+     
+     
