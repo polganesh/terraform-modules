@@ -22,3 +22,13 @@ data "aws_subnet_ids" "private_app_subnets" {
     Name = "*-privApp-*"
   }
 }
+
+# get reference of subnet which contains name as -pub-
+data "aws_subnet_ids" "public_subnets" {
+  vpc_id = "${data.aws_vpc.vpc.id}"
+  tags {
+    Name = "*-pub-*"
+  }
+}
+
+
