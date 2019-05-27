@@ -15,9 +15,9 @@ NA
   - Computing 
     - EKS module
 
-### Updated 
+### Updated
 
-## [0.2]
+## [[0.2](https://github.com/polganesh/terraform-modules/compare/0.1...0.2)] - 2019-05-25]
 ### Added
 - AWS 
   - Computing 
