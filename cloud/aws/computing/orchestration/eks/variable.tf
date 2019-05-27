@@ -43,9 +43,4 @@ variable "associate_public_ip_address"{default="false"}
 variable "desired_capacity" {}
 variable "min_size" {}
 variable "max_size" {}
-variable "is_helm_init_req"{
-  default     = "1"
-  description = "if it is > 1then it will initialize helm server component i.e. tiller else if it is 0 then it will not "
-}
-
 
