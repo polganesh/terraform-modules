@@ -5,9 +5,9 @@ https://learn.hashicorp.com/terraform/aws/eks-intro
 ## Prerequisite
 To Create EKS cluster with this module  
 - Following softwares must be installed
-  - AWS CLI
-  - Kubectl
-  - aws-iam-authenticator
+  - AWS CLI - This terraform module internally _add tags to public and private subnet_ hence it is needed and must be _configured_.
+  - Kubectl - useful for interacting with k8s cluster.
+  - aws-iam-authenticator - glue between kubectl and aws IAM authentication
 - This module depends on VPC module of this Repository to create EKS cluster. non default VPC _must_ be present in AWS account region where we are planning to create EKS and must be created with VPC module present in this repository .
 
 
