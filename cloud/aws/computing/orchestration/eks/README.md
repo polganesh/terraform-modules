@@ -66,7 +66,7 @@ it will copy config available from terraform output for module ekscluster in <us
 ![alt text](https://github.com/polganesh/wiki-images/blob/master/terraform-examples/output-config-map-with-nodes.JPG)
 
 ### K8s Dashboard Configuration
-[[Refer](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html)]]
+[[Refer](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html)]
 
 
 
