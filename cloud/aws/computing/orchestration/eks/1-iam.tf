@@ -41,7 +41,7 @@ resource "aws_iam_role_policy_attachment" "eks-service-policy-attachment" {
 
 resource "aws_iam_role" "wnode" {
   name = "rol-glob-${var.environment}-${var.cost_centre}-${var.app_service}Wnd-${var.seq_id}"
- 
+
   assume_role_policy = <<POLICY
 {
   "Version": "2012-10-17",

@@ -3,7 +3,7 @@
 # your real IP. Services like icanhazip.com can help you find this.
 resource "aws_security_group_rule" "tf-eks-cluster-ingress-workstation-https" {
   #cidr_blocks       = ["${var.accessing_computer_ip}/32"]
-  cidr_blocks       = ["0.0.0.0/0"] # not good for prod
+  cidr_blocks       = ["0.0.0.0/0"]                                                  # not good for prod
   description       = "Allow workstation to communicate with the cluster API Server"
   from_port         = 443
   protocol          = "tcp"
@@ -55,5 +55,3 @@ resource "aws_security_group_rule" "tf-eks-node-ingress-master" {
   to_port                  = 443
   type                     = "ingress"
 }
-
-

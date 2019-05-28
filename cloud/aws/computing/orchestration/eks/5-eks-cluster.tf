@@ -5,12 +5,12 @@ resource "aws_eks_cluster" "main" {
 
   vpc_config {
     # refer 0-data.tf for following.
-    subnet_ids = ["${data.aws_subnet_ids.private_app_subnets.ids}"]
+    subnet_ids         = ["${data.aws_subnet_ids.private_app_subnets.ids}"]
     security_group_ids = ["${aws_security_group.tf-eks-master.id}"]
   }
-  
+
   depends_on = [
-				"aws_iam_role_policy_attachment.eks-cluster-policy-attachment", 
-				"aws_iam_role_policy_attachment.eks-service-policy-attachment"
-				]
+    "aws_iam_role_policy_attachment.eks-cluster-policy-attachment",
+    "aws_iam_role_policy_attachment.eks-service-policy-attachment",
+  ]
 }
