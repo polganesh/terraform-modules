@@ -1,6 +1,6 @@
 # Change Log
 
-## [[0.4](https://github.com/polganesh/terraform-modules/compare/0.3.1...0.4)] - 2019-05-27]
+## [[0.4](https://github.com/polganesh/terraform-modules/compare/0.3.1...0.4)] - 2019-05-28]
 
 ### Added
 ECR module
