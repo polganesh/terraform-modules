@@ -1,5 +1,12 @@
 # Change Log
 
+## [[0.4](https://github.com/polganesh/terraform-modules/compare/0.3.1...0.4)] - 2019-05-27]
+
+### Added
+ECR module
+### Updated 
+- apply _terraform fmt_ for all modules
+
 ## [[0.3.1](https://github.com/polganesh/terraform-modules/compare/0.3...0.3.1)] - 2019-05-27]
 
 ### Added
