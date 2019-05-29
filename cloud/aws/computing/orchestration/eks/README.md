@@ -65,8 +65,19 @@ it will copy config available from terraform output for module ekscluster in <us
 - execute it
 ![alt text](https://github.com/polganesh/wiki-images/blob/master/terraform-examples/output-config-map-with-nodes.JPG)
 
-### K8s Dashboard Configuration
-[[Refer](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html)]
+### K8s Dashboard Configuration (Required)
+- This step is required in order to view status of various K8s resources in cluster.
+- [[Refer](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html)]
+
+### Configure Helm Chart (Optional)
+- This step is not required if you are running K8s cluster on experimental basis but required if we are running production ready cluster and when need to host multiple complex micro services to be hosted on k8s cluster.
+- steps
+```
+kubectl -n kube-system create serviceaccount tiller
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+helm init --service-account tiller
+```
+
 
 
 
