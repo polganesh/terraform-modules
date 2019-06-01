@@ -70,7 +70,7 @@ it will copy config available from terraform output for module ekscluster in <us
 - [[Refer](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html)]
 
 ### Configure Helm Chart (Optional)
-- This step is not required if you are running K8s cluster on experimental basis but required if we are running production ready cluster and when need to host multiple complex micro services to be hosted on k8s cluster.
+- This step is not required if you are running K8s cluster on experimental basis but required if we are running production ready cluster and when need to host multiple complex micro services to be hosted on k8s cluster with helm charts.
 - steps
 ```
 kubectl -n kube-system create serviceaccount tiller
