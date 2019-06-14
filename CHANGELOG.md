@@ -1,4 +1,14 @@
 # Change Log
+## [[0.5](https://github.com/polganesh/terraform-modules/compare/0.4...0.5)] - 2019-06-10]
+
+### Added
+Azure AKS module it supports
+- Advance networking feature.
+- Facility to run virtual nodes
+- Integration with Azure log Analytics
+
+### Updated 
+- NA
 
 ## [[0.4](https://github.com/polganesh/terraform-modules/compare/0.3.1...0.4)] - 2019-05-28]
 
