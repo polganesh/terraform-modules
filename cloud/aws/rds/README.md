@@ -5,7 +5,7 @@ This will describe about how to use RDS  module
 We need to provide aws-access-key and aws-secret-key value specific to your AWS account.
 
 ## To Do
-add security group from external
-create module for aurora
-create RDS from snapshot
+- add security group from external
+- create module for aurora
+- create RDS from snapshot
 
