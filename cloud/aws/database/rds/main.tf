@@ -34,6 +34,11 @@ resource "aws_db_subnet_group" "main" {
   }
 }
 
+resource "random_string" "random" {
+  length = 5
+  special = false
+  upper	= false
+}
 
 # A DB instance can contain multiple user-created databases.
 resource "aws_db_instance" "main" {
@@ -44,7 +49,7 @@ resource "aws_db_instance" "main" {
   engine_version       	= "${var.db_engine_version}"
   name     				= "rds${var.region_id}${var.environment}${var.cost_centre}vpc${var.vpc_seq_id}${var.app_service}${var.seq_id}"
   identifier			= "rds${var.region_id}${var.environment}${var.cost_centre}vpc${var.vpc_seq_id}${var.app_service}${var.seq_id}"
-  final_snapshot_identifier="snp${var.region_id}${var.environment}${var.cost_centre}vpc${var.vpc_seq_id}${var.app_service}${var.seq_id}"
+  final_snapshot_identifier="snp${var.region_id}${var.environment}${var.cost_centre}vpc${var.vpc_seq_id}${var.app_service}${var.seq_id}${random_string.random.result}"
   username             	= "${var.db_user_name}"
   password             	= "${var.db_user_password}"
   # ---- db storage details 
