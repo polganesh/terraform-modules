@@ -1,4 +1,12 @@
 # Change Log
+## [[0.6](https://github.com/polganesh/terraform-modules/compare/0.5...0.6)] - 2019-06-18]
+
+### Added
+AWS RDS
+
+### Updated 
+- NA
+
 ## [[0.5](https://github.com/polganesh/terraform-modules/compare/0.4...0.5)] - 2019-06-10]
 
 ### Added
